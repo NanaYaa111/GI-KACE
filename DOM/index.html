@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD DOM</title>
+    
+
+<style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color:aqua;
+        }
+        h1{
+            color: darkblue;
+            text-align: center;
+            font-size: 30px;
+        }
+        .what-is-dom {
+            margin-top: 20px;
+        }
+        .what-is-dom img {
+            width: 200px;
+            height: 250px;
+            display: block;
+        }
+        .main-content{
+            display: flex;
+            flex-direction: column;
+        }
+        form{
+          display: flex;
+           flex-direction: column;
+           width: 100%;
+           max-width: 400px;
+           background: aliceblue;    
+           box-shadow: 0 4px 8px black;    
+           padding: 2rem;
+           border-radius: 10px;
+           margin-top: 30px;
+           gap: 0.5rem;
+           font-family: Arial, Helvetica, sans-serif;
+        }
+        input, textarea{
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .byn{
+             cursor: pointer;
+    background: rgb(101, 101, 250);
+    color: black;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;   
+    width: 50%;
+    align-self: center;
+    transition: 0.15s;
+}      
+  .byn:hover{
+            background: rgb(182, 182, 248);
+            color: white;
+        }
+        #change-me{
+            width: 70px;
+            height: 50px;
+            background-color:white;
+            border-radius: 5px;
+        }
+        .footer{
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>   
+    
+   <section>
+    <h1 id="main-heading">Document Object Model (DOM)</h1> 
+       <p>The Document Object Model (DOM) is a programming interface for web documents.
+         It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as a tree of nodes. Each node represents a part of the document, such as an element, attribute, or text.With the DOM, developers can create dynamic web pages by manipulating the structure and content of the document using programming languages like JavaScript.</p>  
+       <p>The DOM is essential for creating interactive web applications, as it allows developers to respond to user actions, update content dynamically, and modify the appearance of web pages without requiring a full page reload.</p>       Overall, the DOM is a crucial component of modern web development, enabling developers to build rich, interactive user experiences on the web.</p>
+    </section>
+    <section class ="what-is-dom" id="content">
+        <p id="sports"></p>
+       <h2>What is DOM?</h2>
+       <img class="image-change" src="../images/project 3.jpg" alt="">
+       <button id="change-me">Image Changing</button>
+   </section>
+
+   
+    <form id="form-reg"> 
+        <label for ="Name ">Name:</label>
+        <input type="text" id="name" name="name"  placeholder="Enter your name">
+
+        <label for ="age ">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter your age">
+
+        <label for ="email ">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for ="message ">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+         <p id="message-actions"></p>
+        <input type="submit" value="Submit" class="byn">
+        <p id="messageinaction"></p>
+       
+    </form>
+    <section class="footer">
+        &copy; 2025 CSD Students| All rights reserved.
+    </section>
+
+    <script src="script.js"></script>
+    </body>
+
+</html>

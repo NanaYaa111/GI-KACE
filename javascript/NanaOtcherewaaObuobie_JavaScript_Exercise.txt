@@ -1,0 +1,172 @@
+//1. Object Basics
+let student={
+    name:"Ama",
+    age:2,
+    isEnrolled:"true",
+    courses:["Maths", "Science", 'English']
+};
+//Log the second course using the bracket notation.
+console.log('The second course is:"student.courses[1]');
+
+
+//2. Add & Delete Properties
+
+//Add a new property: grade "A"
+student.grade= 'A';
+delete student.isEnrolled;
+
+console.log("UPdated student object:",student);
+/* Expected output:
+{
+name;"Ama",
+age:2',
+courses:['Maths','Science','English']
+grade:'A'
+}
+*/
+
+
+//3. Grade Checker(if-else)
+    function checkGrade(studentName, studentGrade){
+        if (studentGrade==='A'){
+            console.log(`${studentName}:Excellent!`);
+        } else if (studentGrade==="B"){
+            console.log(`${studentName}:Good job`);   
+        } else if (studentGrade==="C"){
+            console.log(`${studentName}:Pass`);    
+        }else{
+            console.log(`${studentName}:Needs Improvement`);        
+        }
+    }
+
+//Test the function using the grade added in Q2
+checkGrade(student.name, student.grade);
+
+//Test with other names and grades
+checkGrade("Ama","A")
+//Output:Ama: Excellent!
+checkGrade("Kojo Asiedu","B")
+//Output: Kojo Asiedu:Good job
+checkGrade("Yaa Menssah", "F")
+//Output: Yaa Mensah:Needs Improvement
+
+
+//4. BMI Calculator Function
+function calculateBMI(weight, height) {
+ Formula: BMI = weight / (height * height)
+    let bmi = weight / (height * height);
+
+    return parseFloat(bmi.toFixed(2));
+}
+
+// Test with: calculateBMI(70, 1.75)[span_9](end_span)
+let testBMI = calculateBMI(70, 1.75);
+console.log("BMI for 70kg and 1.75m is: " + testBMI); // Output: BMI for 70kg and 1.75m is: 22.86
+
+
+//5. For Loop - Even numbers
+console.log("Even numbers from 2 to 20:");
+for(let i=2; i<=20;i+=2) {
+    console.log(i);
+}
+/*Expected output (logged individually):]
+2
+4
+...
+20
+*/
+
+
+//6. While Loop -Countdown
+let count=10;
+
+console.log("Starting Countdown");
+while(count>=1) {
+    console.log(count);
+
+count--;    
+}
+console.log('Go!');
+
+
+// 7. Registration Form Validator
+// NOTE: prompt() and alert() only work in a browser environment.
+function registerUser() {
+    [span_13](start_span)// 1. Uses prompt() to collect: name, email, password[span_13](end_span)
+    const name = prompt("Enter your name:");
+    const email = prompt("Enter your email:");
+    const password = prompt("Enter your password:");
+
+    // Check if any prompt was cancelled (which returns null)
+    if (name === null,  email === null , password === null) {
+        alert("Registration cancelled.");
+        return null;
+    }
+    if (password.length >= 6) {
+        return {
+            name: name,
+            email: email,
+            password: password
+        };
+    } else {
+            alert("Password too short! Must be at least 6 characters.");
+        return null;
+    }
+}
+
+
+
+// 9: Temperature Converter
+function convertTemp(value, unit) {
+    let result;
+
+    if (unit === "C") {
+        result = (value * 9/5) + 32;
+    } else if (unit === "F") {
+        result = (value - 32) * 5/9;
+    } else {
+        return "Invalid unit specified. Use 'C' or 'F'.";
+    }
+    return parseFloat(result.toFixed(1));
+}
+console.log(`25 C to F: ${convertTemp(25, "C")}`);  
+console.log(`98.6 F to C: ${convertTemp(98.6, "F")}`);    
+
+
+// 10: Simple Banking System
+let balance = 1000;
+
+/**
+ * @param {number} amount 
+ * @returns {number | string} 
+ */
+function deposit(amount) {
+    if (amount <= 0 || typeof amount !== 'number') {
+        return "Deposit amount must be a positive number."; // Not allowed negative deposits
+    }
+    balance += amount;
+    balance = parseFloat(balance.toFixed(2));
+    return balance;
+}
+
+/**
+ * @param {number} amount 
+ * @returns {number | string} 
+ */
+function withdraw(amount) {
+    if (amount <= 0 || typeof amount !== 'number') {
+        return "Withdrawal amount must be a positive number."; [span_24](start_span)// Not allowed negative withdrawals[span_24](end_span)
+    }
+    if (balance >= amount) {
+        balance -= amount;
+        balance = parseFloat(balance.toFixed(2));
+        return balance;
+    } else {                        
+        return "Insufficient funds";
+    }
+}
+console.log("Initial Balance: " + balance);
+console.log(`Deposit 250.50: ${deposit(250.50)}`);  
+console.log(`Withdraw 300: ${withdraw(300)}`);   
+
+
