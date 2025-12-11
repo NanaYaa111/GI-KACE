@@ -217,3 +217,14 @@ print(len(political_parties))  # Get the number of items in the set
 #You cannot access items in a set by referring to an index or key,
 #print(political_parties[0])  #This will raise an error because sets are unordered
 
+#Adding items to a set
+political_parties.add("New force")
+print(political_parties)
+
+#Modifying items in the set is not possible
+#political_parties[0]="DPP"  #This will raise an error because sets are unchangeable
+#print(political_parties)
+
+#Removing items from a set
+political_parties.remove("CPP")
+print(political_parties)
