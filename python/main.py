@@ -228,3 +228,148 @@ print(political_parties)
 #Removing items from a set
 political_parties.remove("CPP")
 print(political_parties)
+
+student_id =set()
+
+# student_id_input = int(input("Enter student ID: "))
+# student_id.add(student_id_input)
+# print("Your student ID has been added. Thank you!: ", student_id)
+
+#Dictionaries in Python
+#Dictionaries are used to store data values in key:value pairs.
+#A dictionary is a collection which is ordered*, 
+#changeable and does not allow duplicates.
+#Dictionaries are written with curly brackets, and have
+# keys and values:
+#Dictionary items are ordered, changeable, and does not
+# allow duplicates.
+#Dictionary items are presented in key:value pairs, and 
+#can be referred to by using the key name.
+#Dictionaries are changeable, meaning that we can change,
+# add or remove items after the dictionary has been created.
+#Dictionaries cannot have two items with the same key:
+#Dictionaries can be of any data type:
+
+#Creating a dictionary
+student_profile = {
+    "name": "Miracle",
+    "complexion": "Dark",
+    "age": 12,
+    }
+print(student_profile)  
+print(type(student_profile))
+print(len(student_profile))  # Get the number of items in the dictionary                   
+
+#Accessing dictionary items
+print(student_profile["complexion"])  #Access the value of the key "complexion"
+student_profile["age"]=13  #Modify the value of the key "age"
+print(student_profile)
+
+#Adding items to a dictionary
+student_profile["gender"]="Female"
+print(student_profile)
+
+#Removing items from a dictionary
+student_profile.pop("complexion")
+print(student_profile)
+
+#student_profile.clear()
+#print(student_profile)
+
+#del student_profile
+#print(student_profile) 
+
+
+#OPERATORS IN PYTHON
+#Arithmetic Operators
+#Assignment Operators
+#Comparison Operators
+#Logical Operators
+#Identity Operators
+#Membership Operators
+#Bitwise Operators
+
+#Arithmetic Operators
+# +, -, *, /, %, **, //
+# print(10 + 20)
+# print(10 - 20)
+# print(10 * 20)
+# print(10 / 20)
+# print(10 % 20)
+# print(10 ** 20)
+# print(10 // 20)
+
+#Assignment Operators
+# =, +=, -=, *=, /=, %=, **=, //=
+# x = 10
+# x += 10
+# print(x)
+
+#Comparison Operators
+# ==, !=, >, <, >=, <=
+# print(10 == 10)
+# print(10 != 10)
+# print(10 > 10)
+# print(10 < 10)
+# print(10 >= 10)
+# print(10 <= 10)
+
+#Logical Operators
+# and, or
+# print(10 > 5 and 5 < 10)
+# print(10 > 5 or 5 > 10)
+# print(not(10 > 5))
+#Identity Operators
+# is, is not
+# x = ["apple", "banana"]
+# y = x
+# print(x is y)
+# print(x is not y)
+#Membership Operators
+# in, not in
+# fruits = ["apple", "banana", "cherry"]
+# print("banana" in fruits)
+# print("orange" not in fruits)
+#Bitwise Operators
+# &, |, ^, ~, <<, >>
+# print(10 & 20)
+# print(10 | 20)
+# print(10 ^ 20)
+# print(~10)
+# print(10 << 20)
+# print(10 >> 20)
+a = 7
+b = 2
+
+# addition
+print ('Sum: ', a + b)  
+
+# subtraction
+print ('Subtraction: ', a - b)   
+
+# multiplication
+print ('Multiplication: ', a * b)  
+
+# division
+print ('Division: ', a / b) 
+
+# floor division
+print ('Floor Division: ', a // b)
+
+# modulo
+print ('Modulo: ', a % b)  
+
+# a to the power b
+print ('Power: ', a ** b)
+# assign 10 to a
+a = 10
+
+# assign 5 to b
+b = 5 
+
+# assign the sum of a and b to a
+a += b      # a = a + b
+
+print(a)
+
+# Output: 15
