@@ -417,6 +417,8 @@ print('a <= b =', a <= b)
 age = int(input("Enter your age: "))
 if age >= 18:
     print("You are eligible to cast your vote.")
+elif age < 18 and age>16:
+    print("You will be eligible to vote soon.")
 else:
     print("You are not eligible to cast your vote.")
 
