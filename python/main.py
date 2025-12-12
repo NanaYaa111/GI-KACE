@@ -373,3 +373,88 @@ a += b      # a = a + b
 print(a)
 
 # Output: 15
+
+a = 5
+
+b = 2
+
+# equal to operator
+print('a == b =', a == b)
+
+# not equal to operator
+print('a != b =', a != b)
+
+# greater than operator
+print('a > b =', a > b)
+
+# less than operator
+print('a < b =', a < b)
+
+# greater than or equal to operator
+print('a >= b =', a >= b)
+
+# less than or equal to operator
+print('a <= b =', a <= b)
+
+#Conditional Statements in python
+# if, elif, else statements
+# The if statement used to test a specific condition. 
+# If the condition is true, a block of code (if-block) is executed.
+#If the condition is false, the if-block is skipped. 
+
+#The syntax of an if statement is:
+# if condition:
+#     #block of code to be executed if the condition is true
+
+
+# If statement to ask user to enter a age of a person 
+# who is eligible to vote
+
+#Else statement is used to execut a block of code
+#  when the condition is false.
+
+
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are eligible to cast your vote.")
+else:
+    print("You are not eligible to cast your vote.")
+
+#Elif statement is used to check multiple conditions.
+# The elif statement is short for "else if",
+# and is used to check multiple conditions in an if-else statement.
+# The syntax of an elif statement is:   
+# if condition1:
+#     #block of code to be executed if condition1 is true
+# elif condition2:
+#     #block of code to be executed if condition2 is true
+# else:
+#     #block of code to be executed if both condition1 and condition2 are false
+marks = int(input("Enter your marks: "))
+if marks>=90:
+    print("Grade A")
+elif marks>=80:
+    print("Grade B")
+elif marks>=70:
+    print("Grade C")
+elif marks>=60:
+    print("Grade D")
+elif marks>=50:
+    print("Grade E")  
+else:
+    print("Grade F")
+    
+#Example of elif statement 
+marks = int(input("Enter your marks: "))
+if marks >= 90:
+    print("You got A+ grade.")
+elif marks >= 80:
+    print("You got A grade.")
+elif marks >= 70:
+    print("You got B+ grade.")
+elif marks >= 60:
+    print("You got B grade.")
+elif marks >= 50:   
+    print("You got C grade.")
+else:
+    print("You failed the exam. Better luck next time.")
