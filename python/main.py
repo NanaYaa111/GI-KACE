@@ -460,3 +460,13 @@ elif marks >= 50:
     print("You got C grade.")
 else:
     print("You failed the exam. Better luck next time.")
+    
+number_check =int(input("Enter a number between 1 and 20: "))
+if number_check >=1 and number_check <=20: #Outer if statement
+    if number_check % 2==0:#Inner if statement
+        print(f"{number_check} is an even number.")
+    else:#Inner else statement
+        print(f"{number_check} is an odd number.")
+else:#Outer else statement
+    print("Please enter a number between 1 and 20.")        
+    
