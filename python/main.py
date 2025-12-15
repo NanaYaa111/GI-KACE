@@ -3,7 +3,7 @@
 # multi-line comments.
 # Single-line comments start with the hash character (#) and 
 # extend to the end of the line.
-# Multi-line comments can be created using triple quotes (''' or """).
+# Multi-line comments can be created using triple quotes (''' or """)
 
 
 #Variables in python
@@ -16,7 +16,7 @@ so myVar and myvar are considered different variables.
 
 There are rules for naming variables in Python. These includes:
 1. Variable names must start with a letter 
-or the underscore character.
+or the underscore character.                                                                                  
 2. Variable names cannot start with a number.
 3. Variable names can only contain alpha-numeric characters 
 and underscores (A-z, 0-9, and _ ).
@@ -468,5 +468,112 @@ if number_check >=1 and number_check <=20: #Outer if statement
     else:#Inner else statement
         print(f"{number_check} is an odd number.")
 else:#Outer else statement
-    print("Please enter a number between 1 and 20.")        
+    print("Please enter a number between 1 and 20.") 
     
+    
+print("Welcome to GI-KACE NETWORK")
+print("1. Check Balance")
+print("2. Buy Airtime")
+print("3. Data Plans")
+print("4. Exit")
+
+valid_options = [1, 2, 3, 4]
+
+for _ in range(3):  
+    option = int(input("Enter your option: "))
+    if option in valid_options:
+        if option == 1:
+            print("Your balance is 1000 GHS")
+            break
+        elif option == 2:
+            print("Buy Airtime")
+            break
+        elif option == 3:
+            print("Data Plans")
+            break
+        elif option == 4:
+            print("Thank you for using GI-KACE NETWORK")
+            break
+    else:
+        print("Invalid option — try again")
+else:
+    print("Too many invalid attempts — please try later!")
+    
+learnt_programming_languages = ["Python", "Java", "C++", "JavaScript", "Ruby", "Swift", "Go", "Kotlin", "Rust", "TypeScript"]
+known_programming_languages = ["Python", "Java", "JavaScript"]
+for language in learnt_programming_languages:
+    if language in known_programming_languages:
+        print(f"You already know {language}.")
+    else:
+        print(f"You need to learn {language}.")
+          
+learnt_programming_languages = ["Python", "Java", "C++", "JavaScript", "Ruby", "Swift", "Go", "Kotlin", "Rust", "TypeScript"]
+known_programming_languages = ["Python", "Java", "JavaScript"]
+for language in learnt_programming_languages:
+    if language in known_programming_languages:
+        print(f"You already know {language}.")
+    else:
+        print(f"You need to learn {language}.")
+print("Language check complete.")
+print("----------------------------")
+print("Total number of programming languages learnt: ",len(learnt_programming_languages))
+print("Total number of programming languages known: ",len(known_programming_languages))
+print("Total number of programming languages to learn: ",len(learnt_programming_languages) - len(known_programming_languages))
+
+#Building a registration system with user name email,
+#  password etc using while loop and if-else statements.
+#  should also have a local storage. with login and logout functions.
+# The system should allow multiple users to register.
+# The system should check if the username already exists.
+# If the username exists, it should prompt the user to enter a different username.
+# If the username does not exist, it should store the user details
+# The system should also allow users to login and logout.
+# The system should check if the username and password are correct.
+# If the username and password are correct, it should allow the user to login.
+# If the username and password are incorrect, it should prompt the user to enter the correct username and password.
+# The system should also allow users to change their password.
+# No use of functions and classes for now. 
+# just the basic structure using loops and conditional statements.
+
+users_db = {}
+
+while True:
+    print("Welcome to the Registration System")
+    print("1. Register")
+    print("2. Login")
+    print("3. Exit")
+    choice = input("Enter your choice (1/2/3): ")
+    if choice == '1':
+        username = input("Enter a username: ")
+        if username in users_db:
+            print("Username already exists. Please choose a different username.")
+        else:
+            email = input("Enter your email: ")
+            password = input("Enter your password: ")
+            users_db[username] = {'email': email, 'password': password}
+            print("Registration successful!")
+    elif choice == '2':
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
+        if username in users_db and users_db[username]['password'] == password:
+            print("Login successful!")
+            while True:
+                print("1. Change Password")
+                print("2. Logout")
+                sub_choice = input("Enter your choice (1/2): ")
+                if sub_choice == '1':
+                    new_password = input("Enter your new password: ")
+                    users_db[username]['password'] = new_password
+                    print("Password changed successfully!")
+                elif sub_choice == '2':
+                    print("Logged out successfully!")
+                    break
+                else:
+                    print("Invalid choice. Please try again.")
+        else:
+            print("Invalid username or password. Please try again.")
+    elif choice == '3':
+        print("Exiting the system. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please try again.")          
