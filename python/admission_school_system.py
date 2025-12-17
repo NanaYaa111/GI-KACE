@@ -15,14 +15,14 @@
 
 
 def admission_system(name, age, email, grade):
-    eligible_grades = ['A', 'B', 'C']
+    eligible_grade = 60  
     student_profile = {
         "name": name,
         "age": age,
-        "email": email,
+        "email": email,                                                                                                                                                                                         
         "grade": grade
     }
-    if grade in eligible_grades:
+    if grade in eligible_grade:
         return f"Congratulations {name}, you have been admitted to our school"
     else:
         return f"Sorry {name}, you are not eligible for admission"
@@ -30,7 +30,7 @@ def admission_system(name, age, email, grade):
 name=input("Enter your full name: ")
 age=int(input("Enter your age: "))
 email=input("Enter your email: ")
-grade=input("Enter your grade (A, B, C, D, E, F): ")
+grade=int(input("Enter your grade (1-100): "))
 result = admission_system(name, age, email, grade)
 print(result)
 
